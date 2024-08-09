@@ -16,7 +16,9 @@ class Bot_inline_btns:
     def admin_btns(self):
         one = types.InlineKeyboardButton('Задать курс на продажу', callback_data='givecoursesell')
         two = types.InlineKeyboardButton('Задать курс на покупку', callback_data='givecoursebuy')
-        self.__markup.add(one, two)
+        three = types.InlineKeyboardButton('Экспорт БД', callback_data='export')
+        four = types.InlineKeyboardButton('Создать рассылку', callback_data='newsletter')
+        self.__markup.add(one, two, three, four)
         return self.__markup
 
     def go_chat_with_admin_buy(self):
